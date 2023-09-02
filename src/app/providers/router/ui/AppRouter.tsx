@@ -6,6 +6,7 @@ import { routeConfig } from 'shared/config/routeConfig/routeConfig';
 
 export function AppRouter() {
     return (
+        // eslint-disable-next-line i18next/no-literal-string
         <Suspense fallback={<div>Loading...</div>}>
             <Routes>
                 {Object.values(routeConfig).map(({ element, path }) => (
