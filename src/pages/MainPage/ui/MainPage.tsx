@@ -7,8 +7,6 @@ function MainPage() {
     return (
         <div>
             {t('Главная страница')}
-            {' '}
-            {t('ger')}
         </div>
     );
 }
