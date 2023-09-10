@@ -3,6 +3,8 @@
  * https://jestjs.io/docs/configuration
  */
 
+import path from 'path';
+
 export default {
     // All imported modules in your tests should be mocked automatically
     // automock: false,
@@ -16,6 +18,7 @@ export default {
     // Automatically clear mock calls, instances, contexts and results before every test
     clearMocks: true,
     rootDir: '../../',
+    setupFilesAfterEnv: ['<rootDir>config/jest/setupTests.ts'],
     moduleFileExtensions: [
         'js',
         'mjs',
@@ -29,6 +32,9 @@ export default {
     moduleDirectories: [
         'node_modules',
     ],
+    modulePaths: [
+        '<rootDir>src',
+    ],
     testMatch: [
         '<rootDir>src/**/*(*.)@(spec|test).[tj]s?(x)',
     ],
@@ -36,6 +42,10 @@ export default {
         '\\\\node_modules\\\\',
     ],
     preset: 'ts-jest',
+    moduleNameMapper: {
+        '\\.s?css$': 'identity-obj-proxy',
+        '\\.svg': path.resolve(__dirname, 'jestEmptyComponent.tsx'),
+    },
     // Indicates whether the coverage information should be collected while executing the test
     // collectCoverage: false,
 
@@ -139,6 +149,8 @@ export default {
 
     // Options that will be passed to the testEnvironment
     // testEnvironmentOptions: {},
+
+    testEnvironment: 'jsdom',
 
     // Adds a location field to test results
     // testLocationInResults: false,
