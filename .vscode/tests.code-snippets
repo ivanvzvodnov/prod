@@ -1,0 +1,15 @@
+{
+	"Create custom react function component": {
+	"scope": "typescript, typescriptreact",
+	"prefix": "ts",
+	"body": [
+		"describe('${TM_FILENAME_BASE} tests', () => {",
+		"    test('', () => {",
+		"",
+		"        expect().toEqual();",
+		"    });",
+		"});",
+	],
+	"description": "Шаблон теста"
+	}
+}
