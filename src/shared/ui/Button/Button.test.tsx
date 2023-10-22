@@ -3,7 +3,6 @@ import { Button, ButtonTheme } from './Button';
 
 describe('Button tests', () => {
     test('test render', () => {
-        // eslint-disable-next-line i18next/no-literal-string
         render(<Button>TEST</Button>);
         expect(screen.getByText('TEST')).toBeInTheDocument();
     });
