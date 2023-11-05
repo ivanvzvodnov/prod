@@ -8,10 +8,12 @@
   "Обновить страницу": "Reload page",
   "Главная": "Main",
   "О сайте": "About us",
+  "Профиль": "Profile",
   "Введите логин": "Enter login",
   "Введите пароль": "Enter password",
   "Неверный логин или пароль": "Invalid login or password",
   "Форма авторизации": "Auth form",
   "Войти": "Login",
-  "Выйти": "Logout"
+  "Выйти": "Logout",
+  "PROFILE PAGE": "Profile Page"
 }
