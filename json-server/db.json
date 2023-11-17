@@ -1,26 +1,48 @@
 {
-    "posts": [
-        { "id": "1", "title": "json-server 1", "author": "typicode" },
-        { "id": "2", "title": "json-server 2", "author": "typicode" },
-        { "id": "3", "title": "json-server 3", "author": "typicode" },
-        { "id": "4", "title": "json-server 4", "author": "typicode" }
-    ],
-    "comments": [{ "id": "1", "body": "some comment", "postId": "1" }],
-    "users": [
-        {
-            "id": "1",
-            "username": "admin",
-            "password": "123"
-        }
-    ],
-    "profile": { 
-        "firstname": "Иван",
-        "lastname": "Взводнов",
-        "age": 22,
-        "currency": "RUB",
-        "country": "Россия",
-        "city": "Москва",
-        "username": "admin",
-        "avatar": "https://i.pinimg.com/564x/9e/4b/1c/9e4b1c0a4b2f2416d50c1a151fc6354d.jpg"
-     }
+  "posts": [
+    {
+      "id": "1",
+      "title": "json-server 1",
+      "author": "typicode"
+    },
+    {
+      "id": "2",
+      "title": "json-server 2",
+      "author": "typicode"
+    },
+    {
+      "id": "3",
+      "title": "json-server 3",
+      "author": "typicode"
+    },
+    {
+      "id": "4",
+      "title": "json-server 4",
+      "author": "typicode"
+    }
+  ],
+  "comments": [
+    {
+      "id": "1",
+      "body": "some comment",
+      "postId": "1"
+    }
+  ],
+  "users": [
+    {
+      "id": "1",
+      "username": "admin",
+      "password": "123"
+    }
+  ],
+  "profile": {
+    "firstname": "Иван",
+    "lastname": "Взводнов",
+    "age": 22,
+    "currency": "RUB",
+    "country": "Россия",
+    "city": "Москва",
+    "username": "admin",
+    "avatar": "https://i.pinimg.com/564x/9e/4b/1c/9e4b1c0a4b2f2416d50c1a151fc6354d.jpg"
+  }
 }
