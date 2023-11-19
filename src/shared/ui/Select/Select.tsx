@@ -40,7 +40,7 @@ export const Select = memo((props: SelectProps) => {
                     {`${label}>`}
                 </span>
             )}
-            <select disabled={readonly} className={cls.select} value={value}>
+            <select disabled={readonly} className={cls.select} value={value} onChange={onChangeHandler}>
                 {optionList}
             </select>
         </div>
