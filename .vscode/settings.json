@@ -23,5 +23,8 @@
     "titleBar.inactiveForeground": "#e7e7e799"
   },
   "peacock.color": "#215732",
-  "i18n-ally.keystyle": "nested"
+  "i18n-ally.keystyle": "nested",
+  "files.associations": {
+    "**/.fttemplates/**": "plaintext",
+  }
 }
