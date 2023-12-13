@@ -1,14 +1,20 @@
+import { memo } from 'react';
 import { classNames } from 'shared/lib/classNames/classNames';
-import cls from './ArticleImageBlockComponent.module.scss';
+import { Code } from 'shared/ui/Code/Code';
+import { ArticleCodeBlock } from '../../model/types/article';
+import cls from './ArticleCodeBlockComponent.module.scss';
 
 interface ArticleImageBlockComponentProps {
     className?: string;
+    block: ArticleCodeBlock;
 }
 
-export const ArticleCodeBlockComponent = (props: ArticleImageBlockComponentProps) => {
-    const { className } = props;
+export const ArticleCodeBlockComponent = memo((props: ArticleImageBlockComponentProps) => {
+    const { className, block } = props;
 
     return (
-        <div className={classNames(cls.ArticleImageBlockComponent, {}, [className])} />
+        <div className={classNames(cls.ArticleImageBlockComponent, {}, [className])}>
+            <Code text={block.code} />
+        </div>
     );
-};
+});
