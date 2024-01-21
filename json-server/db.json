@@ -19,7 +19,9 @@
       "img": "https://teknotower.com/wp-content/uploads/2020/11/js.png",
       "views": 1022,
       "createdAt": "26.02.2022",
-      "type": ["IT"],
+      "type": [
+        "IT"
+      ],
       "blocks": [
         {
           "id": "1",
@@ -100,6 +102,30 @@
       "text": "some comment 3",
       "articleId": "1",
       "userId": "1"
+    },
+    {
+      "articleId": "1",
+      "userId": "1",
+      "text": "Новый комментарий",
+      "id": "F-ivWGY"
+    },
+    {
+      "articleId": "1",
+      "userId": "2",
+      "text": "комментарий пользователя",
+      "id": "bh5gNpL"
+    },
+    {
+      "articleId": "1",
+      "userId": "1",
+      "text": "Hello world",
+      "id": "ord5ovc"
+    },
+    {
+      "articleId": "1",
+      "userId": "1",
+      "text": "Манера крутит мир",
+      "id": "gt38I04"
     }
   ],
   "users": [
@@ -118,14 +144,28 @@
       "avatar": "https://i.pinimg.com/564x/9e/4b/1c/9e4b1c0a4b2f2416d50c1a151fc6354d.jpg"
     }
   ],
-  "profile": {
-    "firstname": "Иван",
-    "lastname": "Взводнов",
-    "age": 22,
-    "currency": "RUB",
-    "country": "Россия",
-    "city": "Москва",
-    "username": "admin",
-    "avatar": "https://i.pinimg.com/564x/9e/4b/1c/9e4b1c0a4b2f2416d50c1a151fc6354d.jpg"
-  }
+  "profile": [
+    {
+      "id": "1",
+      "firstname": "Иван",
+      "lastname": "Взводнов",
+      "age": 23,
+      "currency": "RUB",
+      "country": "Россия",
+      "city": "Москва",
+      "username": "admin",
+      "avatar": "https://i.pinimg.com/564x/9e/4b/1c/9e4b1c0a4b2f2416d50c1a151fc6354d.jpg"
+    },
+    {
+      "id": "2",
+      "firstname": "Ulbi",
+      "lastname": "TV",
+      "age": 24,
+      "currency": "RUB",
+      "country": "Россия",
+      "city": "Москва",
+      "username": "ulbi tv",
+      "avatar": "https://teknotower.com/wp-content/uploads/2020/11/js.png"
+    }
+  ]
 }
