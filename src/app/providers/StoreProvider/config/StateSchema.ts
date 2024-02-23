@@ -7,8 +7,11 @@ import { CounterSchema } from 'entities/Counter';
 import { ProfileSchema } from 'entities/Profile';
 import { UserSchema } from 'entities/User';
 import { LoginSchema } from 'features/AuthByUsername';
-import { ArticleDetailsCommentsSchema } from 'pages/ArticleDetailsPage';
-import { NavigateOptions, To } from 'react-router-dom';
+import {
+    ArticleDetailsCommentsSchema,
+    ArticleDetailsPageRecommendationsSchema,
+    ArticleDetailsPageSchema,
+} from 'pages/ArticleDetailsPage';
 import { AddCommentFormSchema } from 'features/addCommentrForm';
 import { ArticlesPageSchema } from 'pages/ArticlesPage';
 import { UISchema } from 'features/UI';
@@ -22,9 +25,9 @@ export interface StateSchema {
     loginForm?: LoginSchema;
     profile?: ProfileSchema;
     articleDetails?: ArticleDetailsSchema;
-    articleDetailsComments?: ArticleDetailsCommentsSchema;
     addCommentForm?: AddCommentFormSchema;
     articlesPage?: ArticlesPageSchema;
+    articleDetailsPage?: ArticleDetailsPageSchema;
 }
 
 export type StateSchemaKey = keyof StateSchema;
