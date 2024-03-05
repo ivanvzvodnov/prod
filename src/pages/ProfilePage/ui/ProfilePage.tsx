@@ -2,12 +2,12 @@ import { Country } from 'entities/Country';
 import { Currency } from 'entities/Currency';
 import {
     fetchProfileData,
-    getProfileData, getProfileError,
+    getProfileError,
     getProfileForm,
     getProfileIsLoading, getProfileReadonly, getProfileValidateErrors, profileActions,
     ProfileCard, profileReducer, ValidateProfileError,
 } from 'entities/Profile';
-import { useCallback, useEffect } from 'react';
+import { useCallback } from 'react';
 import { useTranslation } from 'react-i18next';
 import { useSelector } from 'react-redux';
 import { useParams } from 'react-router-dom';

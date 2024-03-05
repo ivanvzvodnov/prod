@@ -20,7 +20,6 @@ export const Tabs = memo((props: TabsProps) => {
     const {
         className, tabs, value, onTabClick,
     } = props;
-    const { t } = useTranslation();
 
     const clickHandle = useCallback((tab: TabItem) => () => {
         onTabClick(tab);

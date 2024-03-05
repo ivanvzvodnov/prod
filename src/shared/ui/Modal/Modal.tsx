@@ -23,8 +23,6 @@ export const Modal = (props: ModalProps) => {
     const [isMounted, setIsMounted] = useState(false);
     const timerRef = useRef() as MutableRefObject<ReturnType<typeof setTimeout>>;
 
-    const { theme } = useTheme();
-
     const ANIMATION_DELAY = 200;
 
     const closeHandler = useCallback(() => {

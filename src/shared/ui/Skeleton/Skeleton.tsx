@@ -15,8 +15,6 @@ export const Skeleton = memo((props: SkeletonProps) => {
         className, height, width, border,
     } = props;
 
-    const { t } = useTranslation();
-
     const styles: CSSProperties = {
         width,
         height,
