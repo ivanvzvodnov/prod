@@ -2,14 +2,14 @@ import { memo } from 'react';
 import { classNames } from 'shared/lib/classNames/classNames';
 import { Text } from 'shared/ui/Text/Text';
 import { ArticleTextBlock } from '../../model/types/article';
-import cls from './ArticleTextBlockCompoment.module.scss';
+import cls from './ArticleTextBlockComponent.module.scss';
 
-interface ArticleTextBlockCompomentProps {
+interface ArticleTextBlockComponentProps {
     className?: string;
     block: ArticleTextBlock;
 }
 
-export const ArticleTextBlockCompoment = memo((props: ArticleTextBlockCompomentProps) => {
+export const ArticleTextBlockComponent = memo((props: ArticleTextBlockComponentProps) => {
     const { className, block } = props;
 
     return (

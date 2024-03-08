@@ -13,7 +13,7 @@ import {
     Article, ArticleBlockType, ArticleTextBlock, ArticleView,
 } from '../../model/types/article';
 import cls from './ArticleListItem.module.scss';
-import { ArticleTextBlockCompoment } from '../ArticleTextBlockCompoment/ArticleTextBlockCompoment';
+import { ArticleTextBlockComponent } from '../ArticleTextBlockComponent/ArticleTextBlockComponent';
 
 interface ArticleListItemProps {
     className?: string;
@@ -55,7 +55,7 @@ export const ArticleListItem = memo((props: ArticleListItemProps) => {
                     {types}
                     <img alt={article.title} src={article.img} className={cls.img} />
                     {textBlock && (
-                        <ArticleTextBlockCompoment block={textBlock} className={cls.textBlock} />
+                        <ArticleTextBlockComponent block={textBlock} className={cls.textBlock} />
                     )}
                     <div className={cls.footer}>
                         <AppLink target={target} to={RoutePath.article_details + article.id}>
