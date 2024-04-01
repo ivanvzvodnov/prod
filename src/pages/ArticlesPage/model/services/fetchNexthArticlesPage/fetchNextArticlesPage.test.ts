@@ -20,6 +20,7 @@ describe('fetchNextArticlesPage.test tests', () => {
         await thunk.callThunk();
 
         expect(thunk.dispatch).toBeCalledTimes(4);
+        expect(fetchArticlesList).toHaveBeenCalled();
     });
 
     test('not called case', async () => {
