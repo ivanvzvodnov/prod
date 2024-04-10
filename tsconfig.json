@@ -16,6 +16,7 @@
     "esModuleInterop": true,
     // позволяет использовать именованные default импорты вместо "* as"
     "allowSyntheticDefaultImports": true,
+    "isolatedModules": true,
   }, 
   "ts-node": {
     "compilerOptions": {
