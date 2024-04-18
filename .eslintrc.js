@@ -43,7 +43,9 @@ module.exports = {
             'error',
             {
                 markupOnly: true,
-                ignoreAttribute: ['data-testid', 'to', 'target', 'justify', 'align', 'direction', 'gap', 'role', 'as'],
+                ignoreAttribute: [
+                    'data-testid', 'to', 'target', 'justify', 'align', 'direction', 'gap', 'role', 'as', 'border',
+                ],
             },
         ],
         'jsx-a11y/no-static-element-interactions': 'off',
