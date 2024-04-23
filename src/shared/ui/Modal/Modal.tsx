@@ -1,8 +1,8 @@
 import React, {
     ReactNode,
 } from 'react';
-import { classNames, Mods } from 'shared/lib/classNames/classNames';
-import { useModal } from 'shared/lib/hooks/useModal';
+import { classNames, Mods } from '@/shared/lib/classNames/classNames';
+import { useModal } from '@/shared/lib/hooks/useModal';
 import { Portal } from '../Portal/Portal';
 import cls from './Modal.module.scss';
 import { Overlay } from '../Overlay/Overlay';
@@ -22,7 +22,7 @@ export const Modal = (props: ModalProps) => {
 
     const ANIMATION_DELAY = 200;
 
-    const { close, isClosing, isMounted } = useModal({ animationDelay: ANIMATION_DELAY, isOpen: false, onClose });
+    const { close, isClosing, isMounted } = useModal({ animationDelay: ANIMATION_DELAY, isOpen, onClose });
 
     if (lazy && !isMounted) {
         return null;
