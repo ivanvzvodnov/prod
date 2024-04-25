@@ -26,4 +26,5 @@
   "include": [
     "./config/jest/setupTests.ts", "src"
   ],
+  "types": ["vite-plugin-svgr/client"],
 }
