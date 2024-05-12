@@ -4,7 +4,7 @@ import {
     DynamicModuleLoader, ReducerList,
 } from '@/shared/lib/components/DynamicModuleLoader/DynamicModuleLoader';
 import { useAppDispatch } from '@/shared/lib/hooks/useAppDispatch';
-import { Page } from '@/widgets/Page/Page';
+import { Page } from '@/widgets/Page';
 import {
     fetchNextArticlesPage,
 } from '../../model/services/fetchNexthArticlesPage/fetchNextArticlesPage';

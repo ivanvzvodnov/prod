@@ -5,7 +5,7 @@ import { classNames } from '@/shared/lib/classNames/classNames';
 import {
     DynamicModuleLoader, ReducerList,
 } from '@/shared/lib/components/DynamicModuleLoader/DynamicModuleLoader';
-import { Page } from '@/widgets/Page/Page';
+import { Page } from '@/widgets/Page';
 import { VStack } from '@/shared/ui/Stack';
 import { ArticleReccomendationsList } from '@/features/articleReccomendationsList';
 import cls from './ArticleDetailsPage.module.scss';

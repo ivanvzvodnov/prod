@@ -1,3 +1,4 @@
+/* eslint-disable vzvod-plugin/public-api-imports */
 import { Story } from '@storybook/react';
 import { StateSchema, StoreProvider } from '@/app/providers/StoreProvider';
 import { articleDetailsReducer } from '@/entities/Article/model/slices/articleDetailsSlice';
