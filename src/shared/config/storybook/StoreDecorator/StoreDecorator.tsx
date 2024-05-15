@@ -1,11 +1,10 @@
-/* eslint-disable vzvod-plugin/public-api-imports */
 import { Story } from '@storybook/react';
 import { StateSchema, StoreProvider } from '@/app/providers/StoreProvider';
-import { articleDetailsReducer } from '@/entities/Article/model/slices/articleDetailsSlice';
-import { addCommentFormReducer } from '@/features/addCommentrForm/model/slices/addCommentFormSlice';
-import { loginReducer } from '@/features/AuthByUsername/model/slice/loginSlice';
-import { profileReducer } from '@/features/editableProfileCard/model/slice/profileSlice';
-import { ArticleDetailsPageReducer } from '@/pages/ArticleDetailsPage/model/slices';
+import { articleDetailsReducer } from '@/entities/Article/testing';
+import { addCommentFormReducer } from '@/features/addCommentrForm/testing';
+import { loginReducer } from '@/features/AuthByUsername/testing';
+import { profileReducer } from '@/features/editableProfileCard/testing';
+import { ArticleDetailsPageReducer } from '@/pages/ArticleDetailsPage/testing';
 import { ReducerList } from '@/shared/lib/components/DynamicModuleLoader/DynamicModuleLoader';
 
 const defaultAsyncReducers: ReducerList = {

@@ -57,7 +57,10 @@ module.exports = {
         'react/no-array-index-key': 'off',
         'arrow-body-style': 'off',
         'vzvod-plugin/path-checker': ['error', { alias: '@' }],
-        'vzvod-plugin/public-api-imports': ['error', { alias: '@' }],
+        'vzvod-plugin/public-api-imports': ['error', {
+            alias: '@',
+            testFilesPatterns: ['**/*.test.*', '**/*.story.*', '**/StoreDecorator.tsx'],
+        }],
     },
     globals: {
         __IS_DEV__: true,
