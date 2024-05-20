@@ -61,6 +61,10 @@ module.exports = {
             alias: '@',
             testFilesPatterns: ['**/*.test.*', '**/*.story.*', '**/StoreDecorator.tsx'],
         }],
+        'vzvod-plugin/layer-imports': ['error', {
+            alias: '@',
+            ignoreImportPatterns: ['**/StoreProvider', '**/testing'],
+        }],
     },
     globals: {
         __IS_DEV__: true,
