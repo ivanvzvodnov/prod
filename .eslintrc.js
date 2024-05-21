@@ -20,6 +20,7 @@ module.exports = {
         'i18next',
         'react-hooks',
         'vzvod-plugin',
+        'unused-imports',
     ],
     rules: {
         'react/jsx-indent': [2, 4],
@@ -65,6 +66,28 @@ module.exports = {
             alias: '@',
             ignoreImportPatterns: ['**/StoreProvider', '**/testing'],
         }],
+        'unused-imports/no-unused-imports': 'error',
+        'import/order': [
+            'error',
+            {
+                groups: [
+                    'builtin',
+                    'external',
+                    'internal',
+                    'parent',
+                    'sibling',
+                    'index',
+                    'object',
+                ],
+                pathGroups: [
+                    {
+                        pattern: './**.module.*',
+                        group: 'index',
+                        position: 'after',
+                    },
+                ],
+            },
+        ],
     },
     globals: {
         __IS_DEV__: true,

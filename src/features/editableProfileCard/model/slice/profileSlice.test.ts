@@ -1,10 +1,10 @@
-import { Country } from '@/entities/Country';
-import { Currency } from '@/entities/Currency';
-import { Profile } from '@/entities/Profile';
 import { updateProfileData } from '../services/updateProfileData/updateProfileData';
 import { ProfileSchema } from '../types/editableProfileCardSchema';
 import { ValidateProfileError } from '../consts/consts';
 import { profileActions, profileReducer } from './profileSlice';
+import { Profile } from '@/entities/Profile';
+import { Currency } from '@/entities/Currency';
+import { Country } from '@/entities/Country';
 
 const data: Profile = {
     username: 'arholdo',

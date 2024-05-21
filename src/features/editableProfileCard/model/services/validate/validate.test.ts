@@ -1,8 +1,8 @@
+import { ValidateProfileError } from '../../consts/consts';
+import { validate } from './validate';
 import { Country } from '@/entities/Country';
 import { Currency } from '@/entities/Currency';
 import { Profile } from '@/entities/Profile';
-import { validate } from './validate';
-import { ValidateProfileError } from '../../consts/consts';
 
 const data: Profile = {
     username: 'arholdo',
