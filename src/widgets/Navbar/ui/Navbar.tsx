@@ -12,10 +12,10 @@ import { Button, ButtonTheme } from '@/shared/ui/Button';
 
 import { Text, TextTheme } from '@/shared/ui/Text';
 import { AppLink, AppLinkTheme } from '@/shared/ui/AppLink';
-import { RoutePath } from '@/shared/const/router';
 import { HStack } from '@/shared/ui/Stack';
 import { NotificationButton } from '@/features/notificationButton';
 import { AvatarDropdown } from '@/features/avatarDropdown';
+import { getRouteArticleCreate } from '@/shared/const/router';
 
 interface NavbarProps {
     className?: string;
@@ -40,7 +40,7 @@ export const Navbar = memo(({ className }: NavbarProps) => {
         return (
             <header className={classNames(cls.Navbar, {}, [className])}>
                 <Text theme={TextTheme.INVERTED} className={cls.appName} title={t('Prod App')} />
-                <AppLink theme={AppLinkTheme.SECONDARY} to={RoutePath.article_create} className={cls.createBtn}>
+                <AppLink theme={AppLinkTheme.SECONDARY} to={getRouteArticleCreate()} className={cls.createBtn}>
                     {t('Создать статью')}
                 </AppLink>
                 <HStack gap="16" className={cls.actions}>
