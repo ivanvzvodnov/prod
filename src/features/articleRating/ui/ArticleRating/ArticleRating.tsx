@@ -44,6 +44,7 @@ const ArticleRating = memo((props: ArticleRatingProps) => {
         return <Skeleton width="100%" height={120} />;
     }
 
+    // @ts-ignore
     const rating = data?.[0];
 
     return (
