@@ -670,6 +670,15 @@
         "MANAGER"
       ],
       "avatar": "https://i.pinimg.com/564x/9e/4b/1c/9e4b1c0a4b2f2416d50c1a151fc6354d.jpg"
+    },
+    {
+      "id": "4",
+      "username": "testuser",
+      "password": "123",
+      "roles": [
+        "MANAGER"
+      ],
+      "avatar": "https://i.pinimg.com/564x/9e/4b/1c/9e4b1c0a4b2f2416d50c1a151fc6354d.jpg"
     }
   ],
   "profile": [
@@ -687,6 +696,17 @@
     {
       "id": "2",
       "firstname": "Ulbi",
+      "lastname": "TV",
+      "age": 24,
+      "currency": "RUB",
+      "country": "Россия",
+      "city": "Москва",
+      "username": "ulbi tv",
+      "avatar": "https://teknotower.com/wp-content/uploads/2020/11/js.png"
+    },
+    {
+      "id": "3",
+      "firstname": "testuser",
       "lastname": "TV",
       "age": 24,
       "currency": "RUB",
