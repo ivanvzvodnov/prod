@@ -46,7 +46,7 @@ export interface FlexProps {
 
 export const Flex = memo((props: FlexProps) => {
     const {
-        className, children, align = 'center', direction = 'row', justify = 'start', gap, max,
+        className, children, align = 'center', direction = 'row', justify = 'start', gap, max, ...otherProps
     } = props;
 
     const classes = [
@@ -62,7 +62,7 @@ export const Flex = memo((props: FlexProps) => {
     };
 
     return (
-        <div className={classNames(cls.Flex, mods, classes)}>
+        <div className={classNames(cls.Flex, mods, classes)} {...otherProps}>
             {children}
         </div>
     );
