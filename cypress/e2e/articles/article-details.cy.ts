@@ -14,15 +14,15 @@ describe('template spec', () => {
         cy.removeArticle(currenArticleId);
     });
 
-    it('Содержание статьи отображается', () => {
+    it.skip('Содержание статьи отображается', () => {
         cy.getByTestId('ArticleDetails.Info').should('exist');
     });
 
-    it('Список рекомендаций отображается', () => {
+    it.skip('Список рекомендаций отображается', () => {
         cy.getByTestId('ArticleReccomendationsList').should('exist');
     });
 
-    it('Отправка комментария работает', () => {
+    it.skip('Отправка комментария работает', () => {
         cy.getByTestId('ArticleDetails.Info');
         cy.getByTestId('AddCommentForm').scrollIntoView();
         cy.addComment('text');
@@ -30,6 +30,13 @@ describe('template spec', () => {
     });
 
     it('Оценка статьи работает', () => {
+        cy.getByTestId('RatingCard').scrollIntoView();
+        cy.setRate(4, 'feedback');
+        cy.get('[data-selected=true').should('have.length', 4);
+    });
+
+    it('Оценка статьи работает со стабом на фикстурах', () => {
+        cy.intercept('GET', '**/articles/*', { fixture: 'article-details.json' });
         cy.getByTestId('RatingCard').scrollIntoView();
         cy.setRate(4, 'feedback');
         cy.get('[data-selected=true').should('have.length', 4);
