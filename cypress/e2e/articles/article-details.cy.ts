@@ -14,15 +14,15 @@ describe('template spec', () => {
         cy.removeArticle(currenArticleId);
     });
 
-    it.skip('Содержание статьи отображается', () => {
+    it('Содержание статьи отображается', () => {
         cy.getByTestId('ArticleDetails.Info').should('exist');
     });
 
-    it.skip('Список рекомендаций отображается', () => {
+    it('Список рекомендаций отображается', () => {
         cy.getByTestId('ArticleReccomendationsList').should('exist');
     });
 
-    it.skip('Отправка комментария работает', () => {
+    it('Отправка комментария работает', () => {
         cy.getByTestId('ArticleDetails.Info');
         cy.getByTestId('AddCommentForm').scrollIntoView();
         cy.addComment('text');
