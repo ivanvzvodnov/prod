@@ -38,14 +38,17 @@ export const RatingCard = memo((props: RatingCardProps) => {
     const [starsCount, setStarsCount] = useState(rate);
     const [feedback, setFeedback] = useState('');
 
-    const onSelectStarts = useCallback((selectedStarsCount: number) => {
-        setStarsCount(selectedStarsCount);
-        if (hasFeedback) {
-            setisModalOpen(true);
-        } else {
-            onAccept?.(selectedStarsCount);
-        }
-    }, [hasFeedback, onAccept]);
+    const onSelectStarts = useCallback(
+        (selectedStarsCount: number) => {
+            setStarsCount(selectedStarsCount);
+            if (hasFeedback) {
+                setisModalOpen(true);
+            } else {
+                onAccept?.(selectedStarsCount);
+            }
+        },
+        [hasFeedback, onAccept],
+    );
 
     const acceptHandle = useCallback(() => {
         setisModalOpen(false);
@@ -60,15 +63,28 @@ export const RatingCard = memo((props: RatingCardProps) => {
     const modalContent = (
         <>
             <Text title={feedbackTitle} />
-            <Input value={feedback} onChange={setFeedback} placeholder={t('Ваш отзыв')} data-testid="RatingCard.Input" />
+            <Input
+                value={feedback}
+                onChange={setFeedback}
+                placeholder={t('Ваш отзыв')}
+                data-testid="RatingCard.Input"
+            />
         </>
     );
 
     return (
-        <Card className={classNames('', {}, [className])} max data-testid="RatingCard">
+        <Card
+            className={classNames('', {}, [className])}
+            max
+            data-testid="RatingCard"
+        >
             <VStack align="center" gap="8" max>
                 <Text title={starsCount ? t('Спасибо за оценку!') : title} />
-                <StarRating selectedStars={starsCount} size={40} onSelect={onSelectStarts} />
+                <StarRating
+                    selectedStars={starsCount}
+                    size={40}
+                    onSelect={onSelectStarts}
+                />
             </VStack>
             <BrowserView>
                 <Modal isOpen={isModalOpen} lazy>

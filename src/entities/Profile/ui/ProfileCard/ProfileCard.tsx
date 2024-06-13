@@ -28,19 +28,34 @@ interface ProfileCardProps {
 
 export const ProfileCard = (props: ProfileCardProps) => {
     const {
-        className, data,
-        isLoading, error, readonly,
-        onChangeFirstname, onChangeLastname,
-        onChangeCity, onChangeAge,
-        onChangeUsername, onChangeAvatar,
-        onChangeCurrency, onChangeCountry,
+        className,
+        data,
+        isLoading,
+        error,
+        readonly,
+        onChangeFirstname,
+        onChangeLastname,
+        onChangeCity,
+        onChangeAge,
+        onChangeUsername,
+        onChangeAvatar,
+        onChangeCurrency,
+        onChangeCountry,
     } = props;
 
     const { t } = useTranslation('profile');
 
     if (isLoading) {
         return (
-            <HStack justify="center" max className={classNames(cls.ProfileCard, { [cls.loading]: true }, [className])}>
+            <HStack
+                justify="center"
+                max
+                className={classNames(
+                    cls.ProfileCard,
+                    { [cls.loading]: true },
+                    [className],
+                )}
+            >
                 <Loader />
             </HStack>
         );
@@ -48,8 +63,19 @@ export const ProfileCard = (props: ProfileCardProps) => {
 
     if (error) {
         return (
-            <HStack justify="center" max className={classNames(cls.ProfileCard, {}, [className, cls.error])}>
-                <Text title={error} theme={TextTheme.ERROR} align={TextAlign.CENTER} />
+            <HStack
+                justify="center"
+                max
+                className={classNames(cls.ProfileCard, {}, [
+                    className,
+                    cls.error,
+                ])}
+            >
+                <Text
+                    title={error}
+                    theme={TextTheme.ERROR}
+                    align={TextAlign.CENTER}
+                />
             </HStack>
         );
     }
@@ -59,7 +85,11 @@ export const ProfileCard = (props: ProfileCardProps) => {
     };
 
     return (
-        <VStack max gap="16" className={classNames(cls.ProfileCard, mods, [className])}>
+        <VStack
+            max
+            gap="16"
+            className={classNames(cls.ProfileCard, mods, [className])}
+        >
             {data?.avatar && (
                 <HStack justify="center" max className={cls.avatarWrapper}>
                     <Avatar src={data?.avatar} alt="" />

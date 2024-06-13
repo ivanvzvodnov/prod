@@ -1,9 +1,7 @@
 import { HTMLAttributeAnchorTarget, memo } from 'react';
 import { useTranslation } from 'react-i18next';
 import { ArticleBlockType, ArticleView } from '../../model/consts/consts';
-import {
-    Article, ArticleTextBlock,
-} from '../../model/types/article';
+import { Article, ArticleTextBlock } from '../../model/types/article';
 import { ArticleTextBlockComponent } from '../ArticleTextBlockComponent/ArticleTextBlockComponent';
 import cls from './ArticleListItem.module.scss';
 import { classNames } from '@/shared/lib/classNames/classNames';
@@ -26,9 +24,7 @@ interface ArticleListItemProps {
 }
 
 export const ArticleListItem = memo((props: ArticleListItemProps) => {
-    const {
-        className, article, view, target,
-    } = props;
+    const { className, article, view, target } = props;
 
     const { t } = useTranslation('article');
 
@@ -47,11 +43,20 @@ export const ArticleListItem = memo((props: ArticleListItemProps) => {
         ) as ArticleTextBlock;
 
         return (
-            <div className={classNames(cls.ArticleListItem, {}, [className, cls[view]])} data-testid="ArticleListItem">
+            <div
+                className={classNames(cls.ArticleListItem, {}, [
+                    className,
+                    cls[view],
+                ])}
+                data-testid="ArticleListItem"
+            >
                 <Card className={cls.card}>
                     <div className={cls.header}>
                         <Avatar size={30} src={article.user.avatar} />
-                        <Text text={article.user.username} className={cls.username} />
+                        <Text
+                            text={article.user.username}
+                            className={cls.username}
+                        />
                         <Text text={article.createdAt} className={cls.date} />
                     </div>
                     <Text title={article.title} className={cls.title} />
@@ -63,10 +68,16 @@ export const ArticleListItem = memo((props: ArticleListItemProps) => {
                         className={cls.img}
                     />
                     {textBlock && (
-                        <ArticleTextBlockComponent block={textBlock} className={cls.textBlock} />
+                        <ArticleTextBlockComponent
+                            block={textBlock}
+                            className={cls.textBlock}
+                        />
                     )}
                     <div className={cls.footer}>
-                        <AppLink target={target} to={getRouteArticleDetails(article.id)}>
+                        <AppLink
+                            target={target}
+                            to={getRouteArticleDetails(article.id)}
+                        >
                             <Button theme={ButtonTheme.OUTLINE}>
                                 {t('Читать далее')}
                             </Button>
@@ -81,7 +92,10 @@ export const ArticleListItem = memo((props: ArticleListItemProps) => {
     return (
         <AppLink
             to={getRouteArticleDetails(article.id)}
-            className={classNames(cls.ArticleListItem, {}, [className, cls[view]])}
+            className={classNames(cls.ArticleListItem, {}, [
+                className,
+                cls[view],
+            ])}
             target={target}
             data-testid="ArticleListItem"
         >

@@ -17,7 +17,10 @@ import { useAppDispatch } from '@/shared/lib/hooks/useAppDispatch';
 import { useInitialEffect } from '@/shared/lib/hooks/useInitialEffect';
 import { Currency } from '@/entities/Currency';
 import { Country } from '@/entities/Country';
-import { DynamicModuleLoader, ReducerList } from '@/shared/lib/components/DynamicModuleLoader/DynamicModuleLoader';
+import {
+    DynamicModuleLoader,
+    ReducerList,
+} from '@/shared/lib/components/DynamicModuleLoader/DynamicModuleLoader';
 import { VStack } from '@/shared/ui/Stack';
 
 const reducers: ReducerList = {
@@ -42,9 +45,13 @@ export const EditableProfileCard = memo((props: EditableProfileCardProps) => {
     const validateErrors = useSelector(getProfileValidateErrors);
 
     const validateErrorsTranslates = {
-        [ValidateProfileError.SERVER_ERROR]: t('Серверная ошибка при сохранении профиля'),
+        [ValidateProfileError.SERVER_ERROR]: t(
+            'Серверная ошибка при сохранении профиля',
+        ),
         [ValidateProfileError.NO_DATA]: t('Данные не указаны'),
-        [ValidateProfileError.INCORRECT_USER_DATA]: t('Имя и фамилия обязательны'),
+        [ValidateProfileError.INCORRECT_USER_DATA]: t(
+            'Имя и фамилия обязательны',
+        ),
         [ValidateProfileError.INCORRECT_COUNTRY]: t('Некорректный регион'),
         [ValidateProfileError.INCORRECT_AGE]: t('Некорректный возраст'),
     };
@@ -55,49 +62,74 @@ export const EditableProfileCard = memo((props: EditableProfileCardProps) => {
         }
     });
 
-    const onChangeFirstname = useCallback((value?: string) => {
-        dispatch(profileActions.updateProfile({ firstname: value || '' }));
-    }, [dispatch]);
+    const onChangeFirstname = useCallback(
+        (value?: string) => {
+            dispatch(profileActions.updateProfile({ firstname: value || '' }));
+        },
+        [dispatch],
+    );
 
-    const onChangeLastname = useCallback((value?: string) => {
-        dispatch(profileActions.updateProfile({ lastname: value || '' }));
-    }, [dispatch]);
+    const onChangeLastname = useCallback(
+        (value?: string) => {
+            dispatch(profileActions.updateProfile({ lastname: value || '' }));
+        },
+        [dispatch],
+    );
 
-    const onChangeAge = useCallback((value?: string) => {
-        dispatch(profileActions.updateProfile({ age: Number(value) || 0 }));
-    }, [dispatch]);
+    const onChangeAge = useCallback(
+        (value?: string) => {
+            dispatch(profileActions.updateProfile({ age: Number(value) || 0 }));
+        },
+        [dispatch],
+    );
 
-    const onChangeCity = useCallback((value?: string) => {
-        dispatch(profileActions.updateProfile({ city: value || '' }));
-    }, [dispatch]);
+    const onChangeCity = useCallback(
+        (value?: string) => {
+            dispatch(profileActions.updateProfile({ city: value || '' }));
+        },
+        [dispatch],
+    );
 
-    const onChangeUsername = useCallback((value?: string) => {
-        dispatch(profileActions.updateProfile({ username: value || '' }));
-    }, [dispatch]);
+    const onChangeUsername = useCallback(
+        (value?: string) => {
+            dispatch(profileActions.updateProfile({ username: value || '' }));
+        },
+        [dispatch],
+    );
 
-    const onChangeAvatar = useCallback((value?: string) => {
-        dispatch(profileActions.updateProfile({ avatar: value || '' }));
-    }, [dispatch]);
+    const onChangeAvatar = useCallback(
+        (value?: string) => {
+            dispatch(profileActions.updateProfile({ avatar: value || '' }));
+        },
+        [dispatch],
+    );
 
-    const onChangeCurrency = useCallback((value?: Currency) => {
-        dispatch(profileActions.updateProfile({ currency: value }));
-    }, [dispatch]);
+    const onChangeCurrency = useCallback(
+        (value?: Currency) => {
+            dispatch(profileActions.updateProfile({ currency: value }));
+        },
+        [dispatch],
+    );
 
-    const onChangeCountry = useCallback((value?: Country) => {
-        dispatch(profileActions.updateProfile({ country: value }));
-    }, [dispatch]);
+    const onChangeCountry = useCallback(
+        (value?: Country) => {
+            dispatch(profileActions.updateProfile({ country: value }));
+        },
+        [dispatch],
+    );
 
     return (
         <DynamicModuleLoader reducers={reducers}>
             <VStack gap="8" max className={classNames('', {}, [className])}>
                 <EditableProfileCardHeader />
-                {validateErrors?.length && validateErrors.map((err) => (
-                    <Text
-                        text={validateErrorsTranslates[err]}
-                        theme={TextTheme.ERROR}
-                        key={err}
-                    />
-                ))}
+                {validateErrors?.length &&
+                    validateErrors.map((err) => (
+                        <Text
+                            text={validateErrorsTranslates[err]}
+                            theme={TextTheme.ERROR}
+                            key={err}
+                        />
+                    ))}
                 <ProfileCard
                     data={formData}
                     isLoading={isLoading}

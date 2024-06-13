@@ -1,6 +1,4 @@
-import {
-    memo, useCallback, useMemo, useState,
-} from 'react';
+import { memo, useCallback, useMemo, useState } from 'react';
 import { useSelector } from 'react-redux';
 import { getSidebarItems } from '../../model/selectors/getSidebaritems';
 import { SidebarItem } from '../SidebarItem/SidebarItem';
@@ -26,13 +24,23 @@ export const Sidebar = memo((props: SidebarProps) => {
         setCollapsed(!collapsed);
     }, [collapsed]);
 
-    const itemList = useMemo(() => sidebarItemList.map((item) => (
-        <SidebarItem item={item} collapsed={collapsed} key={item.path} />
-    )), [collapsed, sidebarItemList]);
+    const itemList = useMemo(
+        () =>
+            sidebarItemList.map((item) => (
+                <SidebarItem
+                    item={item}
+                    collapsed={collapsed}
+                    key={item.path}
+                />
+            )),
+        [collapsed, sidebarItemList],
+    );
 
     return (
         <aside
-            className={classNames(cls.Sidebar, { [cls.collapsed]: collapsed }, [className])}
+            className={classNames(cls.Sidebar, { [cls.collapsed]: collapsed }, [
+                className,
+            ])}
             data-testid="sidebar"
         >
             <Button

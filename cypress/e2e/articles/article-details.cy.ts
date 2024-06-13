@@ -3,11 +3,13 @@ let currenArticleId = '';
 describe('template spec', () => {
     beforeEach(() => {
         cy.login();
-        cy.createArticle().then((article) => {
-            currenArticleId = article.id;
-        }).then(() => {
-            cy.visit(`articles/${currenArticleId}`);
-        });
+        cy.createArticle()
+            .then((article) => {
+                currenArticleId = article.id;
+            })
+            .then(() => {
+                cy.visit(`articles/${currenArticleId}`);
+            });
     });
 
     afterEach(() => {
@@ -36,7 +38,9 @@ describe('template spec', () => {
     });
 
     it('Оценка статьи работает со стабом на фикстурах', () => {
-        cy.intercept('GET', '**/articles/*', { fixture: 'article-details.json' });
+        cy.intercept('GET', '**/articles/*', {
+            fixture: 'article-details.json',
+        });
         cy.getByTestId('RatingCard').scrollIntoView();
         cy.setRate(4, 'feedback');
         cy.get('[data-selected=true').should('have.length', 4);

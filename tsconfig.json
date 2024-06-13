@@ -1,30 +1,28 @@
 {
-  "compilerOptions": {
-    "outDir": "./dist/",
-    "noImplicitAny": true,
-    "module": "ESNext",
-    "target": "es5",
-    "jsx": "react-jsx",
-    "allowJs": true,
-    "strict": true,
-    "moduleResolution": "node",
-    "baseUrl": ".",
-    "paths": {
-      "@/*": ["./src/*"],
-    },
-    // позволяет использовать imports вместо common js
-    "esModuleInterop": true,
-    // позволяет использовать именованные default импорты вместо "* as"
-    "allowSyntheticDefaultImports": true,
-    "isolatedModules": true,
-  }, 
-  "ts-node": {
     "compilerOptions": {
-      "module": "CommonJS"
-    }
-  },
-  "include": [
-    "./config/jest/setupTests.ts", "src"
-  ],
-  "types": ["vite-plugin-svgr/client"],
+        "outDir": "./dist/",
+        "noImplicitAny": true,
+        "module": "ESNext",
+        "target": "es5",
+        "jsx": "react-jsx",
+        "allowJs": true,
+        "strict": true,
+        "moduleResolution": "node",
+        "baseUrl": ".",
+        "paths": {
+            "@/*": ["./src/*"]
+        },
+        // позволяет использовать imports вместо common js
+        "esModuleInterop": true,
+        // позволяет использовать именованные default импорты вместо "* as"
+        "allowSyntheticDefaultImports": true,
+        "isolatedModules": true
+    },
+    "ts-node": {
+        "compilerOptions": {
+            "module": "CommonJS"
+        }
+    },
+    "include": ["./config/jest/setupTests.ts", "src"],
+    "types": ["vite-plugin-svgr/client"]
 }

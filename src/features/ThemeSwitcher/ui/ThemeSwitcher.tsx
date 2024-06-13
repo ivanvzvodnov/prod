@@ -7,7 +7,7 @@ import { useTheme } from '@/shared/lib/hooks/useTheme';
 import { Theme } from '@/shared/const/theme';
 
 interface ThemeSwitcherProps {
-  className?: string;
+    className?: string;
 }
 
 export const ThemeSwitcher = memo((props: ThemeSwitcherProps) => {

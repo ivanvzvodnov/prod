@@ -1,13 +1,13 @@
 {
-  "Редактировать": "Edit",
-  "Отменить": "Discard",
-  "Сохранить": "Save",
-  "Ваше имя": "Your name",
-  "Ваша фамилия": "Your lastname",
-  "Ваш возраст": "Your age",
-  "Ваш город": "Your city",
-  "Имя пользователя": "Login",
-  "Ссылка на аватар": "Link to the avatar",
-  "Укажите валюту": "Choose the currency",
-  "Укажите страну": "Choose the country"
+    "Редактировать": "Edit",
+    "Отменить": "Discard",
+    "Сохранить": "Save",
+    "Ваше имя": "Your name",
+    "Ваша фамилия": "Your lastname",
+    "Ваш возраст": "Your age",
+    "Ваш город": "Your city",
+    "Имя пользователя": "Login",
+    "Ссылка на аватар": "Link to the avatar",
+    "Укажите валюту": "Choose the currency",
+    "Укажите страну": "Choose the country"
 }

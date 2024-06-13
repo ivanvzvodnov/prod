@@ -1,11 +1,9 @@
-import {
-    ReactNode, memo,
-} from 'react';
+import { ReactNode, memo } from 'react';
 import cls from './Flex.module.scss';
 import { Mods, classNames } from '@/shared/lib/classNames/classNames';
 
 export type FlexJustify = 'start' | 'center' | 'end' | 'between';
-export type FlexAlign = 'start' | 'center' | 'end'
+export type FlexAlign = 'start' | 'center' | 'end';
 export type FlexDirection = 'row' | 'column';
 export type FlexGap = '4' | '8' | '16' | '32';
 
@@ -46,7 +44,14 @@ export interface FlexProps {
 
 export const Flex = memo((props: FlexProps) => {
     const {
-        className, children, align = 'center', direction = 'row', justify = 'start', gap, max, ...otherProps
+        className,
+        children,
+        align = 'center',
+        direction = 'row',
+        justify = 'start',
+        gap,
+        max,
+        ...otherProps
     } = props;
 
     const classes = [

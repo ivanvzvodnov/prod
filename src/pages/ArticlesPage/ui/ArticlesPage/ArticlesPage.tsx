@@ -1,14 +1,13 @@
 import { memo, useCallback } from 'react';
-import {
-    fetchNextArticlesPage,
-} from '../../model/services/fetchNexthArticlesPage/fetchNextArticlesPage';
+import { fetchNextArticlesPage } from '../../model/services/fetchNexthArticlesPage/fetchNextArticlesPage';
 import { articlesPageReducer } from '../../model/slices/articlesPageSlice';
 import { ArticlesPageFilters } from '../ArticlesPageFilters/ArticlesPageFilters';
 import { ArticleInfiniteList } from '../ArticleInfiniteList/ArticleInfiniteList';
 import cls from './ArticlesPage.module.scss';
 import { classNames } from '@/shared/lib/classNames/classNames';
 import {
-    DynamicModuleLoader, ReducerList,
+    DynamicModuleLoader,
+    ReducerList,
 } from '@/shared/lib/components/DynamicModuleLoader/DynamicModuleLoader';
 import { useAppDispatch } from '@/shared/lib/hooks/useAppDispatch';
 import { Page } from '@/widgets/Page';
@@ -41,7 +40,6 @@ const ArticlesPage = (props: ArticlesPageProps) => {
                 <ArticleInfiniteList className={cls.list} />
             </Page>
         </DynamicModuleLoader>
-
     );
 };
 

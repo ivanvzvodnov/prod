@@ -4,7 +4,8 @@ import { useSearchParams } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import { getArticles } from '../../model/slices/articlesPageSlice';
 import {
-    getArticlesPageIsLoading, getArticlesPageView,
+    getArticlesPageIsLoading,
+    getArticlesPageView,
 } from '../../model/selectors/articlesPageSelector';
 import { initArticlesPage } from '../../model/services/initArticlesPage/initArticlesPage';
 import { ArticleList } from '@/entities/Article';
@@ -31,6 +32,11 @@ export const ArticleInfiniteList = memo((props: ArticleInfiniteListProps) => {
     });
 
     return (
-        <ArticleList className={className} isLoading={isLoading} view={view} articles={articles} />
+        <ArticleList
+            className={className}
+            isLoading={isLoading}
+            view={view}
+            articles={articles}
+        />
     );
 });
