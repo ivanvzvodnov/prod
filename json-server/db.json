@@ -611,6 +611,10 @@
             "username": "admin",
             "password": "123",
             "roles": ["ADMIN"],
+            "features": {
+                "isArticleRatingEnabled": false,
+                "isCounterEnabled": false
+            },
             "avatar": "https://i.pinimg.com/564x/9e/4b/1c/9e4b1c0a4b2f2416d50c1a151fc6354d.jpg"
         },
         {
@@ -618,6 +622,10 @@
             "username": "user",
             "password": "123",
             "roles": ["USER"],
+            "features": {
+                "isArticleRatingEnabled": true,
+                "isCounterEnabled": true
+            },
             "avatar": "https://i.pinimg.com/564x/9e/4b/1c/9e4b1c0a4b2f2416d50c1a151fc6354d.jpg"
         },
         {
@@ -625,6 +633,10 @@
             "username": "manager",
             "password": "123",
             "roles": ["MANAGER"],
+            "features": {
+                "isArticleRatingEnabled": true,
+                "isCounterEnabled": false
+            },
             "avatar": "https://i.pinimg.com/564x/9e/4b/1c/9e4b1c0a4b2f2416d50c1a151fc6354d.jpg"
         },
         {

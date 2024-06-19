@@ -14,6 +14,7 @@ import { Page } from '@/widgets/Page';
 import { VStack } from '@/shared/ui/Stack';
 import { ArticleReccomendationsList } from '@/features/articleReccomendationsList';
 import { ArticleRating } from '@/features/articleRating';
+import { getFeatureFlag } from '@/shared/lib/features';
 
 interface ArticleDetailsPageProps {
     className?: string;
@@ -29,6 +30,8 @@ const ArticleDetailsPage = (props: ArticleDetailsPageProps) => {
 
     const { id } = useParams<{ id: string }>();
 
+    const isArticleRatingEnabled = getFeatureFlag('isArticleRatingEnabled');
+
     if (!id) {
         return null;
     }
@@ -41,7 +44,7 @@ const ArticleDetailsPage = (props: ArticleDetailsPageProps) => {
                 <VStack gap="16" max>
                     <ArticleDetailsPageHeader />
                     <ArticleDetails id={id} />
-                    <ArticleRating articleId={id} />
+                    {isArticleRatingEnabled && <ArticleRating articleId={id} />}
                     <ArticleReccomendationsList />
                     <ArticleDetailsComments id={id} />
                 </VStack>
