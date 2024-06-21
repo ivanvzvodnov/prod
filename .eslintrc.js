@@ -24,7 +24,10 @@ module.exports = {
         'unused-imports',
     ],
     rules: {
-        'react/jsx-filename-extension': [2, { extensions: ['.js', '.jsx', '.tsx'] }],
+        'react/jsx-filename-extension': [
+            2,
+            { extensions: ['.js', '.jsx', '.tsx'] },
+        ],
         'import/no-unresolved': 'off',
         'import/prefer-default-export': 'off',
         'no-unused-vars': 'warn',
@@ -43,7 +46,16 @@ module.exports = {
             {
                 markupOnly: true,
                 ignoreAttribute: [
-                    'data-testid', 'to', 'target', 'justify', 'align', 'direction', 'gap', 'role', 'as', 'border',
+                    'data-testid',
+                    'to',
+                    'target',
+                    'justify',
+                    'align',
+                    'direction',
+                    'gap',
+                    'role',
+                    'as',
+                    'border',
                 ],
             },
         ],
@@ -56,16 +68,27 @@ module.exports = {
         'react/no-array-index-key': 'off',
         'arrow-body-style': 'off',
         'vzvod-plugin/path-checker': ['error', { alias: '@' }],
-        'vzvod-plugin/public-api-imports': ['error', {
-            alias: '@',
-            testFilesPatterns: ['**/*.test.*', '**/*.story.*', '**/StoreDecorator.tsx'],
-        }],
-        'vzvod-plugin/layer-imports': ['error', {
-            alias: '@',
-            ignoreImportPatterns: ['**/StoreProvider', '**/testing'],
-        }],
-        "react/jsx-max-props-per-line": ["error", { maximum: 4 }],
+        'vzvod-plugin/public-api-imports': [
+            'error',
+            {
+                alias: '@',
+                testFilesPatterns: [
+                    '**/*.test.*',
+                    '**/*.story.*',
+                    '**/StoreDecorator.tsx',
+                ],
+            },
+        ],
+        'vzvod-plugin/layer-imports': [
+            'error',
+            {
+                alias: '@',
+                ignoreImportPatterns: ['**/StoreProvider', '**/testing'],
+            },
+        ],
+        'react/jsx-max-props-per-line': ['error', { maximum: 4 }],
         'unused-imports/no-unused-imports': 'error',
+        'react/no-unstable-nested-components': 1,
         'import/order': [
             'error',
             {
