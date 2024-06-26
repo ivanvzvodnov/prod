@@ -5,9 +5,11 @@ import { classNames } from '@/shared/lib/classNames/classNames';
 import { Navbar } from '@/widgets/Navbar';
 import { Sidebar } from '@/widgets/Sidebar';
 import { getUserInited, userActions } from '@/entities/User';
+import { useTheme } from '@/shared/lib/hooks/useTheme';
 
 export function App() {
     const dispatch = useDispatch();
+    const { theme } = useTheme();
 
     const inited = useSelector(getUserInited);
 
@@ -15,8 +17,9 @@ export function App() {
         dispatch(userActions.initAuthData());
     }, [dispatch]);
 
+
     return (
-        <div className={classNames('app', {}, [])}>
+        <div className={classNames('app', {}, [theme])}>
             <Suspense fallback="">
                 <Navbar />
                 <div className="content-page">
